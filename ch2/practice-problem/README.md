@@ -1,4 +1,13 @@
 # problem
+## makefile 說明
+- Makefile 參考寫法: https://hackmd.io/@sysprog/SySTMXPvl
+- (generate from copilot )在這個 Makefile 中：
+  - CC 和 CFLAGS 是變數，分別代表編譯器（在這裡是 gcc）和編譯器選項（在這裡是 -Wall -g，表示開啟所有警告並產生除錯資訊）。
+- all 是預設目標，它依賴於 reverse 目標。當你只輸入 make 而不帶任何參數時，make 會嘗試建立 all 目標，這將導致 reverse 目標被建立。
+- reverse 目標依賴於 inplace-swap.o 和 reverse.o。當這兩個檔案都存在時，make 會執行下面的命令來鏈接這兩個物件檔案，產生 reverse 可執行檔。
+- inplace-swap.o 和 reverse.o 目標分別依賴於 inplace-swap.c、inplace-swap.h 和 reverse.c、inplace-swap.h。當這些檔案存在並且比對應的 .o 檔案新時，make 會執行下面的命令來編譯這些源碼檔案，產生 .o 物件檔案。
+- clean 是一個特殊的目標，它不依賴於任何檔案。當你輸入 make clean 時，make 會執行下面的命令來刪除所有的 .o 檔案和 reverse 可執行檔。
+
 ## Practice Problem 2.10  
 
 |step|*x|*y
@@ -41,11 +50,5 @@
 - `bool_xor()`
   - `x ^y =(x &~y)|(~x &y)`
 
-## makefile 說明
-- Makefile 參考寫法: https://hackmd.io/@sysprog/SySTMXPvl
-- (generate from copilot )在這個 Makefile 中：
-  - CC 和 CFLAGS 是變數，分別代表編譯器（在這裡是 gcc）和編譯器選項（在這裡是 -Wall -g，表示開啟所有警告並產生除錯資訊）。
-- all 是預設目標，它依賴於 reverse 目標。當你只輸入 make 而不帶任何參數時，make 會嘗試建立 all 目標，這將導致 reverse 目標被建立。
-- reverse 目標依賴於 inplace-swap.o 和 reverse.o。當這兩個檔案都存在時，make 會執行下面的命令來鏈接這兩個物件檔案，產生 reverse 可執行檔。
-- inplace-swap.o 和 reverse.o 目標分別依賴於 inplace-swap.c、inplace-swap.h 和 reverse.c、inplace-swap.h。當這些檔案存在並且比對應的 .o 檔案新時，make 會執行下面的命令來編譯這些源碼檔案，產生 .o 物件檔案。
-- clean 是一個特殊的目標，它不依賴於任何檔案。當你輸入 make clean 時，make 會執行下面的命令來刪除所有的 .o 檔案和 reverse 可執行檔。
+## 與此章相關的面試題紀錄
+[相關面試問題](interview_question.md)
