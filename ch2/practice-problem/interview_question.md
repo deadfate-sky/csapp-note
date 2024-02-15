@@ -41,7 +41,8 @@ v = 0001 0011 0001 0011
 or
 0x00001313
 ```
-- 旺宏 - 韌體研發工程師  
+- 旺宏 - 韌體研發工程師（[來源](https://www.pttweb.cc/bbs/Tech_Job/M.1612848862.A.6D2)）  
+  - [參考他人試做](https://hackmd.io/@qwe661234/rJUqIOzBo)
 
 Question: coding，使用 bitwise operation 計算出兩個 integer 有幾個 bits 不一樣?
 
